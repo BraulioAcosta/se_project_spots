@@ -1,0 +1,10 @@
+.page {
+  font-family: "Poppins", Helvetica, sans-serif;
+  font-weight: 500;
+  background: #fcf5e5;
+}
+
+.page__section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
