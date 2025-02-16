@@ -1,3 +1,11 @@
+.menubar {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
 .menubar__logo {
   margin: 10px auto;
 }

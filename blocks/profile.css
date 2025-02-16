@@ -14,6 +14,7 @@
 .profile__photo {
   width: 190px;
   height: 190px;
+  border-radius: 10px;
 }
 
 .profile__name {
@@ -26,6 +27,10 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 32px;
+  color: #212121;
 }
 
 .profile__desc {
@@ -38,9 +43,12 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
 }
 
-.profile__edit {
+.profile__edit-button {
   display: flex;
   gap: 8px;
   margin: 0px;
@@ -52,6 +60,7 @@
   font-weight: 500;
   margin-top: auto;
   opacity: 70%;
+  cursor: pointer;
 }
 
 .profile__edit:hover {
@@ -59,7 +68,10 @@
 }
 
 .profile__icon {
-  width: 18.48px;
+  width: 3.6157006598606407;
+  height: 3.213955585788339;
+  top: 13.11px;
+  left: 4.83px;
   color: #212121;
   opacity: 0.7;
 }
@@ -99,7 +111,7 @@
     margin-bottom: 32px;
   }
 
-  .profile__edit {
+  .profile__edit-button {
     margin: 0 auto 20px;
   }
 }

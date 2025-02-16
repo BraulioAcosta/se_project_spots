@@ -7,7 +7,7 @@ Social media site where someone can create there personal profile and upload pho
 ### Overview
 
 - Resizable for desktops and mobile devices.
-- FUsed CSS Grid instead of Flexbox.
+- Used CSS Grid instead of Flexbox.
 
   #### - Link
 
