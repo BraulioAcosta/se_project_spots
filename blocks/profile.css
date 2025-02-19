@@ -14,7 +14,7 @@
 .profile__photo {
   width: 190px;
   height: 190px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .profile__name {
@@ -68,8 +68,6 @@
 }
 
 .profile__edit-icon {
-  width: 18.479999225964608;
-  height: 3.2142154620351118;
   color: #212121;
   opacity: 0.7;
 }
