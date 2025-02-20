@@ -69,7 +69,6 @@
 
 .profile__edit-icon {
   color: #212121;
-  opacity: 0.7;
 }
 
 .profile__text {
@@ -103,11 +102,13 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0;
   }
 
   .profile__avatar {
     flex-direction: column;
+    margin-top: 20px;
+    gap: 12px;
   }
 
   .profile__photo {
