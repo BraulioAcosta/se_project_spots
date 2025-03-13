@@ -26,3 +26,28 @@ const initialCards = [
 ];
 
 console.log(initialCards);
+
+let editModal = document.querySelector("#edit-modal");
+let content = document.querySelector(".content");
+let profileEditBtn = content.querySelector(".profile__edit-button");
+let editModalCloseBtn = document.querySelector(".modal__close");
+
+function toggleModal() {
+  editModal.classList.toggle("modal--modal_opened");
+}
+
+function showModal() {
+  editModal.classList.add("modal--modal_opened");
+}
+
+function hideModal() {
+  editModal.classList.remove("modal--modal_opened");
+}
+
+// toggleModal(editModal);
+
+// profileEditBtn.addEventListener("click", toggleModal);
+// editModalCloseBtn.addEventListener("click", toggleModal);
+
+profileEditBtn.addEventListener("click", showModal);
+editModalCloseBtn.addEventListener("click", hideModal);
