@@ -39,31 +39,37 @@
           </div>
           <div class="profile__post">
             <button class="profile__post-button" type="button">
-              <img src="./images/plus icon.svg" class="profile__post-icon" />
+              <img
+                src="./images/plus-icon.svg"
+                class="profile__post-icon"
+                alt="Plus Icon"
+              />
               New Post
             </button>
           </div>
         </section>
         <section class="page__section">
           <ul class="cards">
-            <li class="card">
-              <img
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="Feldmann photo"
-                class="card__image"
-              />
-              <div class="card__column">
-                <p class="card__name">Val Thorens</p>
-                <button class="card__like-button" type="button">
-                  <img
-                    src="./images/heart.svg"
-                    class="card__like-icon"
-                    alt="heart icon"
-                  />
-                </button>
-              </div>
-            </li>
-            <li class="card">
+            <template id="card__template">
+              <li class="card">
+                <img
+                  src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                  alt="Feldmann photo"
+                  class="card__image"
+                />
+                <div class="card__column">
+                  <p class="card__name">Val Thorens</p>
+                  <button class="card__like-button" type="button">
+                    <img
+                      src="./images/heart.svg"
+                      class="card__like-icon"
+                      alt="heart icon"
+                    />
+                  </button>
+                </div>
+              </li>
+            </template>
+            <!-- <li class="card">
               <img
                 src="./images/2-photo-by-ceiline-from-pexels.jpg"
                 alt="Ceiline Photo"
@@ -147,7 +153,7 @@
                   />
                 </button>
               </div>
-            </li>
+            </li> -->
           </ul>
         </section>
       </main>
@@ -157,7 +163,7 @@
       <div class="modal" id="edit-modal">
         <div class="modal__container">
           <h2 class="modal__title">Edit profile</h2>
-          <button type="submit" class="modal__close">
+          <button type="button" class="modal__close">
             <img
               src="./images/close=X.svg"
               class="modal__close-icon"

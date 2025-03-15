@@ -30,13 +30,19 @@ console.log(initialCards);
 let editModal = document.querySelector("#edit-modal");
 let content = document.querySelector(".content");
 let profileEditBtn = content.querySelector(".profile__edit-button");
+const profileNameElement = document.querySelector(".profile__name");
+const profileJobElement = document.querySelector(".profile__desc");
+const profileFormElement = document.querySelector(".modal__form");
+const nameInput = profileFormElement.querySelector("#name");
+const jobInput = profileFormElement.querySelector("#description");
 let editModalCloseBtn = document.querySelector(".modal__close");
-
-function toggleModal() {
-  editModal.classList.toggle("modal--modal_opened");
-}
+const cardTemplate = document.querySelector("#card__template");
+let cardContainer = document.querySelector(".cards");
 
 function showModal() {
+  nameInput.value = profileNameElement.textContent;
+  jobInput.value = profileJobElement.textContent;
+
   editModal.classList.add("modal--modal_opened");
 }
 
@@ -44,10 +50,34 @@ function hideModal() {
   editModal.classList.remove("modal--modal_opened");
 }
 
-// toggleModal(editModal);
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
 
-// profileEditBtn.addEventListener("click", toggleModal);
-// editModalCloseBtn.addEventListener("click", toggleModal);
+  profileNameElement.textContent = nameInput.value;
+  profileJobElement.textContent = jobInput.value;
+
+  hideModal();
+}
+
+function getCardElement(data) {
+  //object from array
+  const cardElement = cardTemplate.content.cloneNode(true); // clone template element, store in cardElement - - tamplateelement.content.cloneNode(true)
+  let cardName = cardElement.querySelector(".card__name");
+  let cardImage = cardElement.querySelector(".card__image"); //select card image and store in variable
+
+  cardImage.src = data["link"]; //set the image scr att to link field of object
+  cardImage.alt = data["name"]; //set image alt to name field of object
+  cardName.textContent = data["name"]; //set card title to name field of object
+
+  return cardElement; //return the HTML element
+}
 
 profileEditBtn.addEventListener("click", showModal);
 editModalCloseBtn.addEventListener("click", hideModal);
+profileFormElement.addEventListener("submit", handleProfileFormSubmit);
+
+for (let i = 0; i < initialCards.length; i++) {
+  let card = getCardElement(initialCards[i]);
+
+  cardContainer.append(card);
+}
