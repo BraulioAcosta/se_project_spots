@@ -59,8 +59,8 @@ function handleProfileFormSubmit(evt) {
 function getCardElement(data) {
   //object from array
   const cardElement = cardTemplate.content.cloneNode(true); // clone template element, store in cardElement - - tamplateelement.content.cloneNode(true)
-  let cardName = cardElement.querySelector(".card__name");
-  let cardImage = cardElement.querySelector(".card__image"); //select card image and store in variable
+  const cardName = cardElement.querySelector(".card__name");
+  const cardImage = cardElement.querySelector(".card__image"); //select card image and store in variable
 
   cardImage.src = data["link"]; //set the image scr att to link field of object
   cardImage.alt = data["name"]; //set image alt to name field of object
@@ -74,7 +74,7 @@ editModalCloseBtn.addEventListener("click", hideModal);
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
 for (let i = 0; i < initialCards.length; i++) {
-  let card = getCardElement(initialCards[i]);
+  const card = getCardElement(initialCards[i]);
 
   cardContainer.append(card);
 }
