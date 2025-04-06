@@ -57,15 +57,10 @@
                   alt="Feldmann photo"
                   class="card__image"
                 />
+                <button class="card__delete-btn" type="submit"></button>
                 <div class="card__column">
                   <p class="card__name">Val Thorens</p>
-                  <button class="card__like-button" type="button">
-                    <img
-                      src="./images/heart.svg"
-                      class="card__like-icon"
-                      alt="heart icon"
-                    />
-                  </button>
+                  <button class="card__like-button" type="button"></button>
                 </div>
               </li>
             </template>
@@ -75,6 +70,7 @@
       <footer class="footer page__section">
         <p class="footer__text">2025 &copy; Spots</p>
       </footer>
+
       <div class="modal" id="edit-modal">
         <div class="modal__container">
           <h2 class="modal__title">Edit profile</h2>
@@ -90,9 +86,10 @@
               >Name<input
                 type="text"
                 class="modal__input"
-                id="name"
                 placeholder="Type your name"
                 required
+                id="name"
+                name="name"
             /></label>
             <label for="description" class="modal__label"
               >Description<input
@@ -101,9 +98,59 @@
                 placeholder="Describe yourself"
                 required
                 id="description"
+                name="description"
             /></label>
             <button type="submit" class="modal__save">Save</button>
           </form>
+        </div>
+      </div>
+
+      <div class="modal" id="card-modal">
+        <div class="modal__container">
+          <h2 class="modal__title">New Post</h2>
+          <button type="button" class="modal__close">
+            <img
+              src="./images/close=X.svg"
+              class="modal__close-icon"
+              alt="close icon"
+            />
+          </button>
+          <form name="modal__edit" class="modal__form" id="card-form">
+            <label for="card-link" class="modal__label"
+              >Image link<input
+                type="url"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+                required
+                id="card-link"
+                name="link"
+            /></label>
+            <label for="card-name" class="modal__label"
+              >Caption<input
+                type="text"
+                class="modal__input"
+                placeholder="Type your caption"
+                required
+                id="card-name"
+                name="name"
+            /></label>
+            <button type="submit" class="modal__save">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="popout-modal">
+      <div class="modal__content modal__content_type_popout">
+        <button type="button" class="modal__close_type-popout">
+          <img
+            src="./images/CloseIcon.svg"
+            class="modal__popout__close-icon"
+            alt="close icon"
+          />
+        </button>
+        <div class="modal__info">
+          <img class="modal__image" src="#" alt="" />
+          <p class="modal__caption card__name"></p>
         </div>
       </div>
     </div>
