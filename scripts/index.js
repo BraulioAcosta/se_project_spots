@@ -42,11 +42,12 @@ const cardNameInput = cardForm.querySelector("#card-name");
 const cardLinkInput = cardForm.querySelector("#card-link");
 const cardTemplate = document.querySelector("#card__template");
 const cardContainer = document.querySelector(".cards");
-
 const popoutModal = document.querySelector("#popout-modal");
 const popoutModalCloseBtn = popoutModal.querySelector(
-  ".modal__close_type-popout"
+  ".modal__close_type_preview"
 );
+const modalCaption = popoutModal.querySelector(".modal__caption");
+const modalImage = popoutModal.querySelector(".modal__image");
 
 function showModal(modal) {
   modal.classList.add("modal_opened");
@@ -80,9 +81,6 @@ function getCardElement(data) {
   const cardImage = cardElement.querySelector(".card__image");
   const cardLikeBtn = cardElement.querySelector(".card__like-button");
   const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
-  const modalCaption = popoutModal.querySelector(".modal__caption");
-
-  const modalImage = popoutModal.querySelector(".modal__image");
 
   cardImage.src = data["link"];
   cardImage.alt = data["name"];
