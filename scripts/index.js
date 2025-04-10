@@ -73,6 +73,8 @@ function handleCardFormSubmit(evt) {
   cardContainer.prepend(cardElement);
 
   hideModal(cardEditModal);
+  cardNameInput.value = "";
+  cardLinkInput.value = "";
 }
 
 function getCardElement(data) {
@@ -90,6 +92,7 @@ function getCardElement(data) {
     showModal(popoutModal);
 
     modalImage.src = data["link"];
+    modalImage.alt = data["name"];
     modalCaption.textContent = data["name"];
   });
 
